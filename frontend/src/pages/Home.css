@@ -1,0 +1,76 @@
+/* Home.css
+.home-container {
+  padding-bottom: 50px;
+} */
+
+.movies-section {
+  padding: 0 40px;
+  margin-top: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+}
+
+/* Category Filters */
+.filters {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+  background: #f0f0f0;
+}
+
+.filter-btn.active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+.movies-grid {
+  display: grid;
+  /* THE FIX: 'auto-fill' forces the grid to leave empty space instead of stretching the cards! */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  
+  /* This prevents the cards from stretching vertically if one title is longer than another */
+  align-items: start; 
+}
+
+/* Add to Home.css */
+
+.empty-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 20px;
+  border: 1px dashed #ddd;
+}
+
+.empty-results p {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 16px;
+}

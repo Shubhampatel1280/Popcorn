@@ -1,0 +1,128 @@
+.footer {
+  background-color: #0a0a0a; 
+  color: #ffffff;
+  padding: 60px 0 10px 0; /* <-- FIX: Bottom padding reduced to 10px */
+  border-top: 1px solid #222;
+  font-family: 'Inter', sans-serif;
+  margin-top: 80px; 
+  width: 100%;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-brand p {
+  color: #999;
+  line-height: 1.6;
+  max-width: 300px;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  background: #1a1a1a;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #7c5cff; /* Matches your active purple theme */
+  transform: translateY(-3px);
+}
+
+.footer-links, .footer-support {
+  flex: 0.5;
+  min-width: 150px;
+  margin-bottom: 30px;
+}
+
+.footer h4 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+.footer ul li a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #7c5cff;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px; /* Thoda upar ka gap kam kiya */
+  padding-top: 15px;
+  padding-bottom: 0px; /* <-- FIX: Niche ka gap ekdum tight kar diya */
+  border-top: 1px solid #1a1a1a;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
+/* Tere main content wali div pe ye laga de */
+.main-content {
+  min-height: calc(100vh - 250px); /* 250px is approx your navbar + footer height */
+}

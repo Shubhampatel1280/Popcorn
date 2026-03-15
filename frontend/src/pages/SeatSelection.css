@@ -1,0 +1,253 @@
+/* SeatSelection.css */
+.seat-selection-page {
+  padding-bottom: 50px;
+}
+
+.layout-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start; /* Keeps the right sidebar from stretching */
+}
+
+/* LEFT COLUMN - SEAT MAP */
+.seat-map-section {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #eee;
+}
+
+.seat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.seat-header h2 {
+  font-size: 22px;
+}
+
+.seat-legend {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #666;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legend-box.available { border: 1px solid #ccc; }
+.legend-box.booked { background: #e0e0e0; }
+.legend-box.selected { background: black; }
+.legend-box.vip { border: 1px solid #a855f7; color: #a855f7; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;}
+
+/* --- REPLACE YOUR EXISTING SCREEN & SEAT GRID CSS WITH THIS --- */
+
+/* SCREEN (Moved to bottom with a curve) */
+.screen-area {
+  text-align: center;
+  margin-top: 50px; /* Adds space above the screen */
+  padding-top: 20px;
+}
+
+.screen-line {
+  height: 8px;
+  background: #ccc;
+  /* This creates a nice upward curve! */
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0; 
+  margin-bottom: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* Adds a subtle "light glow" coming from the screen */
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.05); 
+}
+
+.screen-text {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 4px;
+}
+
+/* SEAT GRID */
+.seats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.row-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  width: 20px;
+}
+
+.row-seats {
+  display: flex;
+  gap: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 600;
+  color: transparent; /* Hides text until hovered or selected */
+}
+
+/* Show seat number slightly on hover so users know what they are clicking */
+.seat:hover:not(.booked) {
+  border-color: black;
+  color: #999; 
+  transform: scale(1.05); /* Slight pop effect */
+}
+
+.seat.vip {
+  border-color: #a855f7;
+}
+
+.seat.vip:hover:not(.booked) {
+  color: #a855f7;
+}
+
+.seat.selected {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+.seat.selected.vip {
+  background: #a855f7;
+  border-color: #a855f7;
+  color: white;
+}
+
+.seat.booked {
+  background: #e0e0e0;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* SPACE BETWEEN COLUMNS */
+.seat-spacer {
+  width: 30px; /* Made the aisle slightly wider for a cleaner look */
+}
+
+/* RIGHT COLUMN - SUMMARY */
+.summary-section {
+  width: 350px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #eee;
+  position: sticky;
+  top: 20px;
+}
+
+.summary-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.movie-summary h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.movie-summary p {
+  font-size: 13px;
+  color: #777;
+}
+
+.summary-date {
+  text-align: right;
+}
+
+.summary-date p {
+  font-weight: bold;
+  color: #111;
+}
+
+.price-breakdown {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pay-btn {
+  width: 100%;
+  background: black;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-btn:hover {
+  background: #333;
+}

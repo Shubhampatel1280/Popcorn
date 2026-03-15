@@ -1,0 +1,74 @@
+/* Hero.css */
+.hero {
+  height: 90vh;
+  /* background-image is set dynamically in the JSX */
+  background-size: cover;    /* Force the image to cover the whole section */
+  background-position: center top; /* Center horizontally, align to top vertically */
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Adds a smooth fade-in so it doesn't just pop onto the screen */
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Gradient overlay so the text is readable */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}

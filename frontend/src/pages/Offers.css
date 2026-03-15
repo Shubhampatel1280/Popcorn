@@ -1,0 +1,238 @@
+.offers-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  /* padding-bottom: 80px; */
+}
+
+.offers-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* POINTS DASHBOARD */
+.points-dashboard {
+  background: linear-gradient(135deg, #111 0%, #333 100%);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.points-info h2 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+}
+
+.points-info p {
+  color: #ccc;
+  margin: 0;
+  font-size: 16px;
+}
+
+.points-circle {
+  background: #7c5cff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(124, 92, 255, 0.5);
+}
+
+.points-circle h3 {
+  font-size: 36px;
+  margin: 0;
+  line-height: 1;
+}
+
+.points-circle span {
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+/* GENERAL SECTIONS */
+.section-block {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+/* REWARDS GRID */
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.reward-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.reward-card.locked {
+  opacity: 0.7;
+  background: #fafafa;
+}
+
+.reward-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.reward-details {
+  flex: 1;
+}
+
+.reward-details h4 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: #111;
+}
+
+.reward-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.reward-cost {
+  display: inline-block;
+  background: #f0edff;
+  color: #7c5cff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.redeem-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #111;
+  color: white;
+  transition: 0.2s;
+}
+
+.redeem-btn:hover:not(.disabled):not(.redeemed) {
+  background: #7c5cff;
+}
+
+.redeem-btn.disabled {
+  background: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.redeem-btn.redeemed {
+  background: #4ade80;
+  color: white;
+  cursor: default;
+}
+
+/* PROMOS GRID */
+.promos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.promo-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.promo-badge {
+  background: #ff4757;
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transform: rotate(180deg);
+}
+
+.promo-content {
+  padding: 25px;
+  flex: 1;
+}
+
+.promo-content h4 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+}
+
+.promo-content p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+.promo-code-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  border: 1px dashed #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.promo-code-box .code {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.copy-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 15px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #111;
+  color: white;
+}

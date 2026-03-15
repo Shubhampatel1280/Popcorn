@@ -1,0 +1,88 @@
+/* Checkout.css */
+.checkout-page {
+  padding-bottom: 50px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.checkout-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.checkout-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.checkout-card h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.checkout-details {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.checkout-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+.checkout-row font {
+  font-weight: 600;
+  color: #111;
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+  border-top: 2px dashed #ddd;
+  margin-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #333;
+}
+
+.error-msg {
+  color: #d32f2f;
+  background: #ffeeee;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+

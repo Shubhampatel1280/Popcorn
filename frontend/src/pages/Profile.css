@@ -1,0 +1,420 @@
+/* Profile.css */
+.profile-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+/* The purple banner behind the profile */
+.profile-banner {
+  background-color: #7c5cff;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  z-index: 1;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 0 40px;
+  display: flex;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+  align-items: flex-start;
+}
+
+/* LEFT SIDEBAR */
+.profile-sidebar {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-card, .quick-actions-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.user-card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.user-card p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.stat-item h4 {
+  font-size: 20px;
+}
+
+.stat-item span {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.gold-member-badge {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.gold-member-badge p {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.gold-member-badge span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* QUICK ACTIONS */
+.quick-actions-card {
+  text-align: left;
+  padding: 20px;
+}
+
+.quick-actions-card h4 {
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.action-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #555;
+}
+
+.action-btn:hover {
+  background: #f8f9fa;
+}
+
+.action-btn.active {
+  background: #f0edff;
+  color: #7c5cff;
+  font-weight: bold;
+}
+
+.action-btn.logout-text {
+  color: #d32f2f;
+}
+
+/* RIGHT MAIN CONTENT */
+.profile-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card, .bookings-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.card-header h3 {
+  font-size: 20px;
+}
+
+.edit-btn {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.info-item label {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* --- NEW FULL WIDTH ITEM FOR PROFILE PIC URL --- */
+.info-item-full {
+  grid-column: 1 / -1; /* Makes it span across all columns */
+}
+
+.info-item-full label {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.info-item-full input {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.info-item-full input:focus {
+  border-color: #7c5cff;
+  outline: none;
+}
+/* ---------------------------------------------- */
+
+.not-provided {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Input fields in edit mode */
+.info-item input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-item input:focus {
+  border-color: #7c5cff;
+  outline: none;
+}
+
+/* Save/Cancel Buttons */
+.edit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-save {
+  background: #7c5cff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-cancel {
+  background: white;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* BOOKINGS LIST */
+.booking-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.booking-poster {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.booking-details {
+  flex: 1;
+}
+
+.booking-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.booking-title-row h4 {
+  font-size: 18px;
+}
+
+.status-badge {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.status-badge.completed { background: #f0f0f0; color: #555; }
+.status-badge.confirmed { background: #e8f5e9; color: #2e7d32; }
+
+.booking-theater {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.booking-meta {
+  display: flex;
+  gap: 30px;
+}
+
+.b-meta-item span {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.b-meta-item p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.booking-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rate-btn {
+  background: white;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 30px;
+  color: #555;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.empty-bookings {
+  text-align: center;
+  padding: 40px 20px;
+  color: #777;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px dashed #ccc;
+  margin-top: 10px;
+}
+
+.empty-bookings p {
+  margin-bottom: 15px;
+}
+
+.browse-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.browse-btn:hover {
+  background: #333;
+}
+
+/* Simple utility class to hide elements */
+.section-content.hidden {
+  display: none !important;
+}
+
+/* Smooth transition when sections are visible */
+.section-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure empty favorites message matches your grid spacing */
+.empty-favorites {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px 0;
+  color: #777;
+  font-style: italic;
+}
