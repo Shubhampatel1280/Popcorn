@@ -17,7 +17,7 @@ PoPCorn is a full-stack web application built with the **MERN stack**, designed 
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Styling:** Custom CSS (Glassmorphism, Flexbox, Grid)
-- **Auth:** Context API / JWT (Optional: Mention if using)
+- **Auth:** Context API / JWT
 
 ## 🛠️ Installation & Setup
 
