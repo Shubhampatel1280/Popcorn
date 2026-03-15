@@ -2,8 +2,6 @@
 
 PoPCorn is a full-stack web application built with the **MERN stack**, designed to provide a sleek, modern, and cinematic ticket booking experience. Featuring a high-end **Glassmorphism UI**, PoPCorn allows users to discover the latest movies, explore theaters, and book seats through an intuitive, translucent interface.
 
-![Project Preview](https://via.placeholder.com/800x400?text=PoPCorn+UI+Preview)
-
 ## ✨ Features
 
 - **Glassmorphism UI:** A modern, frosted-glass design system implemented with CSS `backdrop-filter`.
